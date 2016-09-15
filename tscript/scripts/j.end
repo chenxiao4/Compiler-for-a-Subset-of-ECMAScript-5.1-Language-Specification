@@ -1,0 +1,5 @@
+# disable the JAVA_TOOL_OPTIONS environment variable that exists on agate
+unset JAVA_TOOL_OPTIONS
+
+# -Xmx limits the heap size to be a good citizen on agate
+java -Xmx256m -cp ".:$TS_ROOT/build/packages" $@
